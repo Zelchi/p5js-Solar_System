@@ -46,7 +46,7 @@ function draw() {
     background(0);
     fill(255)
     textSize(30)
-    text("Sol", sol.x - 30, sol.y - 110)
+    text("Sol", sol.x - 25, sol.y - 55)
     ellipse(sol.x, sol.y, tamanhoSol)
     planetas.forEach((planeta) => planeta());
 }

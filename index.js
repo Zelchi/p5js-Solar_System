@@ -38,15 +38,20 @@ function criaPlaneta(nome, tamanho, velAngular, raio, color) {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    fill(255, 255, 255)
+    fill(255, 255, 255);
     sol = createVector(width / 2, height / 2);
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    sol.set(width / 2, height / 2);
 }
 
 function draw() {
     background(0);
-    fill(255)
-    textSize(30)
-    text("Sol", sol.x - 25, sol.y - 55)
-    ellipse(sol.x, sol.y, tamanhoSol)
+    fill(255);
+    textSize(30);
+    text("Sol", sol.x - 25, sol.y - 55);
+    ellipse(sol.x, sol.y, tamanhoSol);
     planetas.forEach((planeta) => planeta());
 }
